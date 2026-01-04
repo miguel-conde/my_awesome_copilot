@@ -23,7 +23,7 @@ Reusable skill packages that extend GitHub Copilot agents with specialized capab
 
 | Title | Description | Tools Required |
 |-------|-------------|----------------|
-| Copilot Asset Installer <br/> [Install in VS Code](vscode://github.copilot.skills/install?url=https://raw.githubusercontent.com/miguel/my_awesome_copilot/main/skills/copilot-asset-installer/SKILL.md) [Install in VS Code Insiders](vscode-insiders://github.copilot.skills/install?url=https://raw.githubusercontent.com/miguel/my_awesome_copilot/main/skills/copilot-asset-installer/SKILL.md) | Complete VSCode Copilot asset management system with intelligent discovery, installation, and deployment capabilities for agents, prompts, instructions, collections, and skill packages. | `execute/runInTerminal`, `execute/getTerminalOutput`, `web/fetch`, `web/githubRepo`, `edit/createFile`, `edit/editFiles` |
+| Copilot Asset Installer <br/> [Install in VS Code](vscode://github.copilot.chat/installSkill?url=https://raw.githubusercontent.com/miguel-conde/my_awesome_copilot/main/skills/copilot-asset-installer/SKILL.md) [Install in VS Code Insiders](vscode-insiders://github.copilot.chat/installSkill?url=https://raw.githubusercontent.com/miguel-conde/my_awesome_copilot/main/skills/copilot-asset-installer/SKILL.md) | Complete VSCode Copilot asset management system with intelligent discovery, installation, and deployment capabilities for agents, prompts, instructions, collections, and skill packages. | `execute/runInTerminal`, `execute/getTerminalOutput`, `web/fetch`, `web/githubRepo`, `edit/createFile`, `edit/editFiles` |
 
 ## Skill Development
 
