@@ -214,6 +214,33 @@ Adapt to the current workspace by:
 - [Profiles in Visual Studio Code](https://code.visualstudio.com/docs/configure/profiles)
   - Access the Profiles editor, Create a Profile, Manage profiles, Synchronize profiles across machines, Share Profiles, Uses for profiles, Profile Templates, Command line, Common Questions
 
+### More on Skills
+
+- [What are skills?](https://agentskills.io/what-are-skills)
+  - How skills work
+  - The SKILL.md file
+  - Next steps
+    - Read [authoring best practices](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices) for writing effective skills. ***This document is absolutly a must-read.***. If you only can read one external document, read this.
+      - Core principles: Concise is key - Set appropriate degrees of freedom - Test with all models you plan to use
+      - Skill structure: Naming conventions - Writing effective descriptions - Progressive disclosure patterns - Avoid deeply nested references - Structure longer reference files with table of contents
+      - Workflows and feedback loops: Use workflows for complex tasks - Implement feedback loops
+      - Content guidelines: Avoid time-sensitive information - Use consistent terminology 
+      - Common patterns:  Template pattern - Examples pattern - Conditional workflow pattern
+      - Evaluation and iteration: Build evaluations first - Develop Skills iteratively with Claude - Observe how Claude navigates Skills
+      - Anti-patterns to avoid: Avoid Windows-style paths - Avoid offering too many options
+      - Advanced: Skills with executable code: Solve, don't punt - Provide utility scripts - Use visual analysis - Create verifiable intermediate outputs - Package dependencies - Runtime environment - MCP tool references - Avoid assuming tools are installed
+      - Technical notes: YAML frontmatter requirements - Token budgets
+      - Checklist for effective Skills: Core quality - Code and scripts - Testing
+- [Specification](https://agentskills.io/specification)
+  - Directory structure
+  - SKILL.md format
+  - Optional directories
+  - Progressive disclosure
+  - File references
+  - Validation
+- [Anthropic's Skills Examples](https://github.com/anthropics/skills)
+
+
 ### AI Toolkit in VSCode
 
 - [Overview](https://code.visualstudio.com/docs/intelligentapps/overview)
