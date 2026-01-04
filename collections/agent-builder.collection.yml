@@ -1,0 +1,52 @@
+id: agent-builder
+name: Agent Builder Framework
+description: A comprehensive project-agnostic framework for VSCode Copilot customization that helps teams create and manage custom agents, prompts, instructions, and Agent Skills across any development workflow.
+tags: [vscode-copilot, customization, framework, project-agnostic, meta-learning, agent-development, agent-skills, documentation, best-practices]
+items:
+  # Core Agent - The heart of the framework
+  - path: .github/agents/agent-builder.agent.md
+    kind: agent
+
+  # Interactive Creation Prompts
+  - path: .github/prompts/new-agent.prompt.md
+    kind: prompt
+  - path: .github/prompts/new-prompt.prompt.md
+    kind: prompt
+  - path: .github/prompts/new-instructions.prompt.md
+    kind: prompt
+
+  # Validation and Quality Assurance
+  - path: .github/prompts/validate-definition.prompt.md
+    kind: prompt
+
+  # Discovery and Documentation Workflows
+  - path: .github/prompts/find-pattern.prompt.md
+    kind: prompt
+  - path: .github/prompts/explain-feature.prompt.md
+    kind: prompt
+
+  # Planning and Documentation Assistant
+  - path: .github/prompts/plan-docs-assistant.prompt.md
+    kind: prompt
+
+  # Asset Installation and Management
+  - path: .github/prompts/install-copilot-assets.prompt.md
+    kind: prompt
+
+  # Framework Guidelines and Best Practices
+  - path: .github/instructions/agents.instructions.md
+    kind: instruction
+  - path: .github/instructions/prompts.instructions.md
+    kind: instruction
+  - path: .github/instructions/instructions.instructions.md
+    kind: instruction
+  - path: .github/instructions/skills.instructions.md
+    kind: instruction
+
+  # Agent Skills - Reusable capabilities following open standard
+  - path: .github/skills/skill-creator/SKILL.md
+    kind: skill
+
+display:
+  ordering: manual # Preserve logical grouping order above
+  show_badge: true # Show collection badge on items for recognition
