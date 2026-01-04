@@ -5,12 +5,12 @@ Curated collections of GitHub Copilot customizations (agents, prompts, instructi
 ### How to Use Collections
 
 **To Install:**
-- Click the VS Code or VS Code Insiders install button for the collection you want to use
-- Download the `*.collection.yml` file and use it with the deployment system
-- Collections automatically install all included customizations
+- Browse the collection markdown files to see all included items
+- Click individual install buttons for each agent, prompt, or instruction you want
+- Collections organize related customizations - install the ones you need
 
 **To Deploy:**
-- Use the `deploy-collection` prompt with a collection file
+- Use the `deploy-collection` prompt with a collection YAML file
 - Collections support both local and remote repository sources
 - Dependency resolution ensures proper installation order
 
@@ -24,7 +24,7 @@ Curated collections of GitHub Copilot customizations (agents, prompts, instructi
 
 | Title | Description | Items | Tags |
 |-------|-------------|-------|----- |
-| [Agent Builder Framework](../collections/agent-builder.collection.yml)<br/>[![Install in VS Code](https://img.shields.io/badge/VS_Code-Install-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://aka.ms/awesome-copilot/install/agent?url=vscode%3Achat-prompt%2Finstall%3Furl%3Dhttps%3A%2F%2Fraw.githubusercontent.com%2Fmiguel-conde%2Fmy_awesome_copilot%2Fmain%2Fcollections%2Fagent-builder.collection.yml)<br/>[![Install in VS Code Insiders](https://img.shields.io/badge/VS_Code_Insiders-Install-24bfa5?style=flat-square&logo=visualstudiocode&logoColor=white)](https://aka.ms/awesome-copilot/install/agent?url=vscode-insiders%3Achat-prompt%2Finstall%3Furl%3Dhttps%3A%2F%2Fraw.githubusercontent.com%2Fmiguel-conde%2Fmy_awesome_copilot%2Fmain%2Fcollections%2Fagent-builder.collection.yml) | A comprehensive project-agnostic framework for VSCode Copilot customization that helps teams create and manage custom agents, prompts, instructions, and Agent Skills across any development workflow. | 15+ agents, prompts, and instructions | `vscode-copilot`, `customization`, `framework`, `project-agnostic`, `meta-learning` |
+| [Agent Builder Framework](../collections/agent-builder.md) | A comprehensive project-agnostic framework for VSCode Copilot customization that helps teams create and manage custom agents, prompts, instructions, and Agent Skills across any development workflow. | 10 agents, prompts, and instructions | `vscode-copilot`, `customization`, `framework`, `project-agnostic`, `meta-learning` |
 
 ## Collection Format
 

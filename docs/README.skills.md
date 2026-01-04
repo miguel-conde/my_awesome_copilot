@@ -5,8 +5,8 @@ Reusable skill packages that extend GitHub Copilot agents with specialized capab
 ### How to Use Agent Skills
 
 **To Install:**
-- Click the VS Code or VS Code Insiders install button for the skill you want to use
-- Download the skill package and add it to your repository
+- Copy the skill folder to your local `.github/skills/` directory
+- Preserve the complete folder structure including all files and subdirectories
 - Configure your agents to use the skill via the `tools` or `skills` property
 
 **To Configure:**
@@ -23,7 +23,7 @@ Reusable skill packages that extend GitHub Copilot agents with specialized capab
 
 | Title | Description | Tools Required |
 |-------|-------------|----------------|
-| [Copilot Asset Installer](../skills/copilot-asset-installer/SKILL.md)<br/>[![Install in VS Code](https://img.shields.io/badge/VS_Code-Install-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://aka.ms/awesome-copilot/install/agent?url=vscode%3Achat-prompt%2Finstall%3Furl%3Dhttps%3A%2F%2Fraw.githubusercontent.com%2Fmiguel-conde%2Fmy_awesome_copilot%2Fmain%2Fskills%2Fcopilot-asset-installer%2FSKILL.md)<br/>[![Install in VS Code Insiders](https://img.shields.io/badge/VS_Code_Insiders-Install-24bfa5?style=flat-square&logo=visualstudiocode&logoColor=white)](https://aka.ms/awesome-copilot/install/agent?url=vscode-insiders%3Achat-prompt%2Finstall%3Furl%3Dhttps%3A%2F%2Fraw.githubusercontent.com%2Fmiguel-conde%2Fmy_awesome_copilot%2Fmain%2Fskills%2Fcopilot-asset-installer%2FSKILL.md) | Complete VSCode Copilot asset management system with intelligent discovery, installation, and deployment capabilities for agents, prompts, instructions, collections, and skill packages. | `execute/runInTerminal`, `execute/getTerminalOutput`, `web/fetch`, `web/githubRepo`, `edit/createFile`, `edit/editFiles` |
+| [Copilot Asset Installer](../skills/copilot-asset-installer/SKILL.md) | Complete VSCode Copilot asset management system with intelligent discovery, installation, and deployment capabilities for agents, prompts, instructions, collections, and skill packages. | `execute/runInTerminal`, `execute/getTerminalOutput`, `web/fetch`, `web/githubRepo`, `edit/createFile`, `edit/editFiles` |
 
 ## Skill Development
 
