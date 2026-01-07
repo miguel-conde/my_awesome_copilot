@@ -21,6 +21,14 @@ Before creating or modifying any files in the `.github/agents/` directory, you *
 - Follow any existing agent conventions established in the workspace
 - **Consider project-specific context discovery (optional)**: Agents may check `.github/context/{agent-name}/` for project methodologies and standards when relevant
 
+## Agent Skills Coordination
+
+- **Choose agents for conversational assistance** that requires reasoning, context management, or interactive workflows
+- **Consider Agent Skills instead** for automatic capabilities that load based on context, especially when bundling resources (templates, scripts, examples)
+- **Reference skills in agents**: Agents can mention when to use specific skills or direct users to skill-based workflows
+- **Avoid duplication**: Don't create both an agent and skill for the same capability - choose the appropriate type based on interaction model
+- **Skills integration**: Agents can reference skill documentation and guide users to skill-based automation when appropriate
+
 ## Example Structure
 
 ```markdown

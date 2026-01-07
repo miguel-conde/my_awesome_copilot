@@ -24,7 +24,7 @@ Curated collections of GitHub Copilot customizations (agents, prompts, instructi
 
 | Title | Description | Items | Tags |
 |-------|-------------|-------|----- |
-| [Agent Builder Framework](../collections/agent-builder.md) | A comprehensive project-agnostic framework for VSCode Copilot customization that helps teams create and manage custom agents, prompts, instructions, and Agent Skills across any development workflow. | 10 agents, prompts, and instructions | `vscode-copilot`, `customization`, `framework`, `project-agnostic`, `meta-learning` |
+| [Agent Builder Framework](../collections/agent-builder.md) | A comprehensive project-agnostic framework for VSCode Copilot customization that helps teams create and manage custom agents, prompts, instructions, and Agent Skills across any development workflow. | 23 items (agents, prompts, instructions, skills, resources) | `vscode-copilot`, `customization`, `framework`, `project-agnostic`, `meta-learning` |
 
 ## Collection Format
 
@@ -49,9 +49,9 @@ items:
     kind: prompt
     
   - path: .github/instructions/example.instructions.md
-    kind: instructions
+    kind: instruction
     
-  - path: skills/example-skill/
+  - path: .github/skills/example-skill/SKILL.md
     kind: skill
 
 dependencies:
@@ -115,7 +115,7 @@ To contribute a new collection:
 ```
 /
 ├── collections/    # Collection definition files
-├── agemts/         # Custom agent definitions
+├── agents/         # Custom agent definitions
 ├── prompts/        # Reusable prompt files
 ├── instructions/   # Custom instructions files
 ├── skills/         # Agent Skills packages

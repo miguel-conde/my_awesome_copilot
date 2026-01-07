@@ -10,7 +10,7 @@ Team and project-specific instructions to enhance GitHub Copilot's behavior for 
 
 **To Use/Apply:**
 - Copy these instructions to your `.github/copilot-instructions.md` file in your workspace
-- Create task-specific `.github/.instructions.md` files in your workspace's `.github/instructions` folder
+- Create task-specific `.github/instructions/*.instructions.md` files in your workspace's `.github/instructions` folder
 - Instructions automatically apply to Copilot behavior once installed in your workspace
 
 ## Available Instructions
@@ -40,7 +40,7 @@ To contribute a new instruction:
 ```
 /
 ├── instructions/    # Custom instructions files
-├── agemts/         # Custom agent definitions
+├── agents/         # Custom agent definitions
 ├── prompts/        # Reusable prompt files  
 ├── collections/    # Agent collections
 └── docs/          # Documentation

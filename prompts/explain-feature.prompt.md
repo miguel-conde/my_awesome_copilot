@@ -17,6 +17,8 @@ Use #tool:web/fetch to access the official documentation from your online docume
 
 Topics you can explain:
 - Custom agents and their structure
+- Agent Skills and progressive loading
+- Agent Skills vs custom agents (when to use each)
 - Prompt files and slash commands
 - Instructions files and applyTo patterns
 - Handoffs between agents
@@ -26,3 +28,4 @@ Topics you can explain:
 - Agent workflows and multi-step processes
 - Background agents and cloud agents
 - Subagents with custom agents
+- Skill bundling with templates, scripts, and examples

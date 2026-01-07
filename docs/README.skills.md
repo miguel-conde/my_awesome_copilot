@@ -7,7 +7,7 @@ Reusable skill packages that extend GitHub Copilot agents with specialized capab
 **To Install:**
 - Copy the skill folder to your local `.github/skills/` directory
 - Preserve the complete folder structure including all files and subdirectories
-- Configure your agents to use the skill via the `tools` or `skills` property
+- Agent Skills are discovered and loaded by Copilot when relevant (depending on your VS Code/Copilot feature support)
 
 **To Configure:**
 - Agent Skills are referenced in agent definitions via file paths or skill names
@@ -24,25 +24,19 @@ Reusable skill packages that extend GitHub Copilot agents with specialized capab
 | Title | Description | Tools Required |
 |-------|-------------|----------------|
 | [Copilot Asset Installer](../skills/copilot-asset-installer/SKILL.md) | Complete VSCode Copilot asset management system with intelligent discovery, installation, and deployment capabilities for agents, prompts, instructions, collections, and skill packages. | `execute/runInTerminal`, `execute/getTerminalOutput`, `web/fetch`, `web/githubRepo`, `edit/createFile`, `edit/editFiles` |
+| [Skill Creator](../skills/skill-creator/SKILL.md) | Complete workflow for creating Agent Skills following the open standard, including structure, progressive loading, and quality checklists. | — |
 
 ## Skill Development
 
 ### Creating a New Skill
 
-1. Create a new directory in `skills/` with your skill name
+1. Create a new directory in `.github/skills/` with your skill name
 2. Create a `SKILL.md` file with metadata and documentation:
 
 ```markdown
 ---
 name: your-skill-name
-description: Brief description of what this skill does
-license: MIT
-compatibility: Requirements and dependencies
-metadata:
-  author: your-name
-  version: "1.0.0"
-  repository: https://github.com/your-repo
-allowed-tools: tool1 tool2 tool3
+description: Brief description of what this skill does and when to use it
 ---
 
 # Your Skill Name
@@ -53,12 +47,13 @@ allowed-tools: tool1 tool2 tool3
 3. Organize your skill with the following structure:
 
 ```
-skills/your-skill-name/
+.github/skills/your-skill-name/
 ├── SKILL.md          # Main documentation and metadata
+├── templates/        # Optional: Code templates
 ├── scripts/          # Executable scripts and tools
 ├── examples/         # Usage examples
-├── references/       # Reference documentation
-└── tests/           # Test files (if applicable)
+├── docs/             # Optional: Additional documentation
+└── data/             # Optional: Reference data
 ```
 
 ### Best Practices
@@ -84,7 +79,7 @@ To contribute a new skill:
 ```
 /
 ├── skills/         # Agent Skills packages
-├── agemts/         # Custom agent definitions
+├── agents/         # Custom agent definitions
 ├── prompts/        # Reusable prompt files
 ├── instructions/   # Custom instructions files
 ├── collections/    # Agent collections

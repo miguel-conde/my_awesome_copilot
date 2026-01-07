@@ -19,6 +19,14 @@ Before creating or modifying any files in the `.github/prompts/` directory, you 
 - Content should provide clear, actionable instructions for a specific task or workflow
 - Use prompts to create variants of agent workflows or common task patterns
 
+## Agent Skills Coordination
+
+- **Prompts vs Skills**: Use prompts for manual/interactive workflows, skills for automatic context-based activation
+- **Skill discovery prompts**: Create prompts that help users find and understand available skills
+- **Skill activation prompts**: Design prompts that trigger workflows where skills are likely to activate automatically
+- **Reference skills**: Prompts can reference and guide users to relevant skills for specific capabilities
+- **Workflow handoffs**: Consider how prompts might transition users to skill-based automation
+
 ## Example Structure
 
 ```markdown

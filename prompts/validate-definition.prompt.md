@@ -1,15 +1,21 @@
 ---
 agent: agent-builder
 name: validate-definition
-description: Validate agent or prompt file structure against official documentation
+description: Validate agent, prompt, instructions, or skill file structure against official documentation
 ---
 
-Validate an agent definition (`.agent.md`) or prompt file (`.prompt.md`) against official VSCode documentation and project guidelines.
+Validate an agent definition (`.agent.md`), prompt file (`.prompt.md`), instructions file (`.instructions.md`), or Agent Skill (`SKILL.md`) against official VSCode documentation and project guidelines.
 
 ## Validation Process
 
 ### Step 1: Identify File Type
-Ask the user which file to validate, or use #tool:search to find recent agent/prompt files in the workspace.
+Ask the user which file to validate, or use #tool:search to find recent agent/prompt/instructions/skill files in the workspace.
+
+File types supported:
+- `.agent.md` - Custom agent definitions
+- `.prompt.md` - Prompt files  
+- `.instructions.md` - Instructions files
+- `SKILL.md` - Agent Skills (in `.github/skills/*/` directories)
 
 ### Step 2: Read the File
 Use #tool:readFile to load the file content.
@@ -17,6 +23,8 @@ Use #tool:readFile to load the file content.
 ### Step 3: Fetch Official Documentation
 - For `.agent.md`: Fetch [Custom Agents documentation](https://code.visualstudio.com/docs/copilot/customization/custom-agents)
 - For `.prompt.md`: Fetch [Prompt Files documentation](https://code.visualstudio.com/docs/copilot/customization/prompt-files)
+- For `.instructions.md`: Fetch [Custom Instructions documentation](https://code.visualstudio.com/docs/copilot/customization/custom-instructions)
+- For `SKILL.md`: Fetch [Agent Skills documentation](https://code.visualstudio.com/docs/copilot/customization/agent-skills)
 
 ### Step 4: Check Structure
 
@@ -44,6 +52,32 @@ Validate:
 - [ ] **Tool names**: If specified, are they valid?
 - [ ] **Body content**: Clear, actionable instructions?
 - [ ] **Project compliance**: Follows `.github/instructions/prompts.instructions.md`?
+
+#### For Instructions Files (`.instructions.md`)
+Validate:
+- [ ] **File location**: Typically in `.github/instructions/` or other directories
+- [ ] **File extension**: Is it `.instructions.md`?
+- [ ] **YAML frontmatter**: Present and properly formatted?
+- [ ] **Required fields**: `description` and `applyTo` are present
+- [ ] **ApplyTo pattern**: Valid glob pattern (e.g., `**/*.py`, `src/**`)
+- [ ] **Description**: Clear explanation of what the instructions cover
+- [ ] **Body content**: Concise, actionable guidelines?
+- [ ] **Project compliance**: Follows `.github/instructions/instructions.instructions.md`?
+
+#### For Agent Skills (`SKILL.md`)
+Validate:
+- [ ] **File location**: Is it in `.github/skills/{skill-name}/SKILL.md`?
+- [ ] **File name**: Is it exactly `SKILL.md`?
+- [ ] **YAML frontmatter**: Present and properly formatted?
+- [ ] **Required fields**: `name` and `description` are present
+- [ ] **Name field**: Lowercase with hyphens, max 64 characters, unique identifier?
+- [ ] **Description field**: Specific about capabilities AND use cases, max 1024 characters?
+- [ ] **Directory name**: Does `.github/skills/{skill-name}/` match the skill name?
+- [ ] **Body content**: Clear instructions describing what, when, and how?
+- [ ] **Resource references**: Do relative path references to bundled resources work?
+- [ ] **Progressive loading design**: Follows three-level loading principles?
+- [ ] **Project compliance**: Follows `.github/instructions/skills.instructions.md`?
+- [ ] **Bundled resources**: If present, are they properly organized and referenced?
 
 ### Step 5: Report Findings
 
@@ -86,6 +120,13 @@ If errors are found:
 - Invalid agent reference
 - Incorrect prompt syntax
 
+### Skills-Specific Issues
+- Invalid skill name format (not lowercase with hyphens)
+- Description too generic (doesn't specify capabilities AND use cases)
+- Missing progressive loading design
+- Broken relative path references to bundled resources
+- Directory name doesn't match skill name
+
 ### Content Issues
 - Vague or unclear instructions
 - Missing workflow steps
@@ -119,6 +160,38 @@ If errors are found:
 - Could reference more specific documentation sections
 
 **Overall**: Valid and ready to use!
+```
+
+### Skills Validation Example
+
+```markdown
+## Validation Report for `skill-creator/SKILL.md`
+
+✅ **Valid Structure**
+- Location: `.github/skills/skill-creator/SKILL.md` ✓
+- File name: `SKILL.md` ✓
+- YAML frontmatter: Valid ✓
+
+✅ **Required Fields**
+- Name: "skill-creator" (valid format, 12 chars) ✓
+- Description: Specific about capabilities and use cases (158 chars) ✓
+
+✅ **Progressive Loading Design**
+- Level 1: Name and description optimize discovery ✓
+- Level 2: Clear step-by-step instructions in body ✓
+- Level 3: Proper relative path references to bundled resources ✓
+
+✅ **Bundled Resources**
+- Templates directory: Referenced correctly ✓
+- Scripts directory: Referenced correctly ✓
+- Examples directory: Referenced correctly ✓
+- All relative paths: Working ✓
+
+⚠️ **Suggestions**
+- Could add more specific examples for different skill complexity levels
+- Consider referencing the validation checklist for self-checking
+
+**Overall**: Excellent Agent Skill following the open standard!
 ```
 
 ## Remember

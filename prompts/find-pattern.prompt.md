@@ -11,6 +11,8 @@ Use #tool:githubRepo to find real-world examples of:
 - Handoff patterns between agents
 - Prompt files for common workflows
 - Instructions files for different use cases
+- Agent Skills with bundled resources and progressive loading
+- Skill patterns for different complexity levels
 - MCP server integrations
 - Tool set definitions
 

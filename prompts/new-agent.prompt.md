@@ -16,6 +16,25 @@ Ask the user:
 - What tasks should it perform?
 - Who is the target user? (beginner, expert, specific team role)
 
+### Step 1.5: Agent vs Skill Decision
+Help the user decide between creating an agent or an Agent Skill:
+
+**Choose Agent when**:
+- Need interactive conversation capabilities
+- Require complex reasoning and context management
+- Want to switch personas/modes during chat
+- Need handoffs to other agents
+- Focused on conversational assistance
+
+**Choose Agent Skill when**:
+- Want automatic activation based on context
+- Need bundled resources (templates, scripts, examples)
+- Creating reusable capability across projects
+- Building specialized workflow that loads on-demand
+- Want portable capability across AI tools
+
+If they need an Agent Skill instead, suggest using the [new-skill prompt](/new-skill) instead.
+
 ### Step 2: Research Similar Agents
 Use #tool:githubRepo to search Awesome Copilot for similar agent examples and show them to the user for inspiration.
 
