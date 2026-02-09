@@ -9,7 +9,7 @@ applyTo: '**/*.py'
 
 - Follow PEP 8 style guide religiously for all Python code
 - Use PEP 257 conventions for all docstrings
-- Type hints are mandatory for all functions, methods, and class attributes
+- Type hints using annotations are mandatory for all functions, methods, and class attributes
 - Prefer object-oriented programming patterns by default
 - Apply appropriate design patterns when they improve code clarity and maintainability
 - Document every module, class, method, and function without exception
@@ -37,7 +37,10 @@ applyTo: '**/*.py'
 
 ## Type Hinting Requirements
 
-- Include type hints for all function parameters and return values
+- Include type hints using annotations for all:
+    - Function parameters and return values
+    - Method parameters and return values.
+    - Class attributes.
 - Use `typing` module imports: `List`, `Dict`, `Optional`, `Union`, `Callable`
 - For Python 3.9+, prefer built-in generics: `list`, `dict` instead of `List`, `Dict`
 - Use `Optional[T]` for parameters that can be None
