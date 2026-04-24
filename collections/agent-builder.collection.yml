@@ -44,6 +44,10 @@ items:
   # Agent Skills - Reusable capabilities following open standard
   - path: skills/skill-creator/SKILL.md
     kind: skill
+  - path: skills/pymc-marketing-mmm/SKILL.md
+    kind: skill
+  - path: skills/pymc-marketing-mmm/docs/notebook-map.md
+    kind: documentation
 
   # Skill Development Resources (complete toolkit)
   - path: skills/skill-creator/docs/validation-checklist.md

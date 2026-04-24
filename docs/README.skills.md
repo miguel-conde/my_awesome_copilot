@@ -25,6 +25,7 @@ Reusable skill packages that extend GitHub Copilot agents with specialized capab
 |-------|-------------|----------------|
 | [Copilot Asset Installer](../skills/copilot-asset-installer/SKILL.md) | Complete VSCode Copilot asset management system with intelligent discovery, installation, and deployment capabilities for agents, prompts, instructions, collections, and skill packages. | `execute/runInTerminal`, `execute/getTerminalOutput`, `web/fetch`, `web/githubRepo`, `edit/createFile`, `edit/editFiles` |
 | [Skill Creator](../skills/skill-creator/SKILL.md) | Complete workflow for creating Agent Skills following the open standard, including structure, progressive loading, and quality checklists. | — |
+| [PyMC-Marketing MMM](../skills/pymc-marketing-mmm/SKILL.md) | Implement Marketing Mix Models (MMM) with the pymc-marketing Bayesian library. Covers model setup, adstock/saturation transformations, fitting, diagnostics, budget allocation, lift test calibration, causal inference, and model evaluation. Includes a full task-to-notebook lookup map. | `web/fetch` |
 
 ## Skill Development
 
